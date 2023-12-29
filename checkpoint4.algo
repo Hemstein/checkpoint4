@@ -1,0 +1,60 @@
+ALGORITHM algorithm_name
+VAR
+    A=:{1,2,4}
+    B:={5,6,9,4,5,1}
+    i:=0,j:=0,K=0:
+    l=True:
+BEGIN
+    FOR i FROM 0 TO A.lenght-1 STEP 1  DO
+        FOR j FROM 0 To lenght-1 STEP 1  DO
+            IF (A[i]!=B[j]) THEN
+            L=True
+            else l=False
+            END_IF
+        END_FOR
+        if L=True
+            k=k+A[i]
+    END_FOR
+    FOR j FROM 0 TO B.lenght-1 STEP 1  DO
+        FOR i FROM 0 TO B.lenght-1 STEP 1  DO
+            IF (B[i]!=A[i]) THEN
+                l=True
+                else l=False
+               
+            END_IF
+            if l=True
+             k=k+B[i]
+        END_FOR
+    END_FOR
+    write(k)
+END
+
+PROCEDURE dot_product(var ps:INTEGER)
+
+VAR
+ps,x1,x2,y1,y2: INTEGER
+   
+BEGIN
+ x1*x2+y1*y2:=ps
+ if ps=0 THEN
+  write("les deux vecteur sont orthogonaux")
+ else
+  write("les deux vecteur ne sont pas orthogonaux")
+
+
+   
+END_IF
+END
+FUNCTION dot_productt(x1,x2,y1,y2) : return_integer
+VAR
+    ps,x1,x2,y1,y2:INTEGER
+BEGIN
+    ps=x1*x2+y1*y2
+       RETURN ps ;
+END
+ s=dot_productt
+ IF(s=0) THEN
+   write("les deux vecteur sont orthogonaux")
+else
+  write("les deux vecteur ne sont pas orthogonaux")
+END_IF
